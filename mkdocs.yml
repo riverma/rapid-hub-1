@@ -1,6 +1,6 @@
 site_name: RAPID
 site_description: Routing Application for Parallel computatIon of Discharge - Advanced River Network Modeling
-site_url: https://c-h-david.github.io/rapid-hub
+site_url: https://riverma.github.io/rapid-hub-1
 site_author: RAPID Development Team
 
 nav:
@@ -9,6 +9,7 @@ nav:
       - Quick Start: user-guide/quick-start-sandbox.md
       - Mississippi Tutorial: user-guide/tutorial-mississippi.md
       - Migrating to RAPID2: user-guide/migrating-to-rapid2.md
+      - Notebook Demo: user-guide/tutorials/notebook-demo.ipynb
 
 theme:
   name: material
@@ -67,6 +68,9 @@ plugins:
   - search:
       lang: en
   - macros
+  - mkdocs-jupyter:
+      execute: false
+      include_source: true
 
 markdown_extensions:
   - admonition
