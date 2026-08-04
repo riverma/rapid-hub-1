@@ -12,19 +12,19 @@
         <meta name="author" content="RAPID Development Team">
       
       
-        <link rel="canonical" href="https://riverma.github.io/rapid-hub-1/user-guide/quick-start-sandbox/">
+        <link rel="canonical" href="https://riverma.com/rapid-hub-1/user-guide/quick-start-sandbox/">
       
       
         <link rel="prev" href="../..">
       
       
-        <link rel="next" href="../tutorial-mississippi/">
+        <link rel="next" href="../bias-correction-sandbox/">
       
       
         
       
       
-      <link rel="icon" href="../../imgs/rapid-logo.png">
+      <link rel="icon" href="../../imgs/icon_rapid_network.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
@@ -100,7 +100,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="RAPID" class="md-header__button md-logo" aria-label="RAPID" data-md-component="logo">
       
-  <img src="../../imgs/rapid-logo.png" alt="logo">
+  <img src="../../imgs/icon_rapid_network.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -282,7 +282,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="RAPID" class="md-nav__button md-logo" aria-label="RAPID" data-md-component="logo">
       
-  <img src="../../imgs/rapid-logo.png" alt="logo">
+  <img src="../../imgs/icon_rapid_network.svg" alt="logo">
 
     </a>
     RAPID
@@ -500,14 +500,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial-mississippi/" class="md-nav__link">
+      <a href="../bias-correction-sandbox/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Mississippi Tutorial
+    Bias Correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../understanding-files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Understanding Files
   
 
     
@@ -555,15 +583,72 @@
   
   
   
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Examples
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../tutorials/notebook-demo/" class="md-nav__link">
+      <a href="../examples/tutorial-mississippi/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    RAPID2 Sandbox — run it live
+    Mississippi Basin
   
 
     
@@ -572,6 +657,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -675,10 +768,15 @@
 <p>Get RAPID2 running in under five minutes using our synthetic Sandbox environment. This tutorial covers installation, running a baseline simulation, and plotting the resulting hydrographs.</p>
 <h2 id="1-installation">1. Installation<a class="headerlink" href="#1-installation" title="Permanent link">&para;</a></h2>
 <p>RAPID2 is a modern Python package. To install it, we highly recommend using a Python 3.11 virtual environment to avoid dependency conflicts, then installing via <code>pip</code>:</p>
-<div class="highlight"><pre><span></span><code>python3.11<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>rapid_env
+<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>rapid_env
 <span class="nb">source</span><span class="w"> </span>rapid_env/bin/activate
 pip<span class="w"> </span>install<span class="w"> </span>rapid2
+rapid2<span class="w"> </span>--version
 </code></pre></div>
+<blockquote>
+<p>This tutorial was written for <code>rapid2 2.0.0b3</code>. If you've installed a previous version of RAPID2, consider doing <code>pip install --upgrade rapid2</code>.
+RAPID2 was designed for <code>python3.11</code> but users have had success with <code>3.12</code>, <code>3.13</code>, and <code>3.14</code>. You can check the version you have installed with <code>python --version</code>.</p>
+</blockquote>
 <h2 id="2-get-the-sandbox-data">2. Get the Sandbox Data<a class="headerlink" href="#2-get-the-sandbox-data" title="Permanent link">&para;</a></h2>
 <p>RAPID2 uses a synthetic experiment for testing which uses a river network with 5 reaches and 2 gauges (like our logo), hosted on Zenodo, and described in more detail in <a href="https://github.com/c-h-david/rapid2/blob/main/SANDBOX.md"><code>SANDBOX.md</code></a>. The Sandbox download tool should automatically  be available in your terminal from the installation via <code>pip</code>:</p>
 <div class="highlight"><pre><span></span><code>dsandbox
@@ -708,7 +806,7 @@ pip<span class="w"> </span>install<span class="w"> </span>rapid2
 <span class="w">  </span>-Qob<span class="w"> </span>input/Sandbox/Qob_Sandbox_19700101_19700110_TR.nc4<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-Qme<span class="w"> </span>output/Sandbox/Qme_Sandbox_19700101_19700110_OL_tst.nc4<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-max<span class="w"> </span><span class="m">100</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-hyd<span class="w"> </span>output/Sandbox/hyd.svg
+<span class="w">  </span>-hyd<span class="w"> </span>output/Sandbox/hyd_Qou_OL.svg
 </code></pre></div>
 <p>Check your <code>output/Sandbox/</code> folder for the newly generated <code>.svg</code> files—you have successfully run and visualized your first RAPID2 simulation!</p>
 <p>Now you can safely deactivate your virtual environment:</p>

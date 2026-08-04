@@ -12,9 +12,13 @@
         <meta name="author" content="RAPID Development Team">
       
       
-        <link rel="canonical" href="https://riverma.com/rapid-hub-1/about/citing/">
+        <link rel="canonical" href="https://riverma.com/rapid-hub-1/user-guide/bias-correction-sandbox/">
       
       
+        <link rel="prev" href="../quick-start-sandbox/">
+      
+      
+        <link rel="next" href="../understanding-files/">
       
       
         
@@ -25,7 +29,7 @@
     
     
       
-        <title>Citing RAPID - RAPID</title>
+        <title>Bias Correction - RAPID</title>
       
     
     
@@ -78,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#citing-rapid" class="md-skip">
+        <a href="#bias-correction-the-rapid2-sandbox" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Citing RAPID
+              Bias Correction
             
           </span>
         </div>
@@ -230,11 +234,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../user-guide/quick-start-sandbox/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../quick-start-sandbox/" class="md-tabs__link">
           
   
   
@@ -315,28 +321,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -354,7 +363,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -372,7 +381,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/quick-start-sandbox/" class="md-nav__link">
+      <a href="../quick-start-sandbox/" class="md-nav__link">
         
   
   
@@ -397,10 +406,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../user-guide/bias-correction-sandbox/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bias Correction
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -416,6 +452,81 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-calculate-the-scaling-factors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Calculate the Scaling Factors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-apply-bias-correction-to-external-inflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Apply Bias Correction to External Inflow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-run-the-bias-corrected-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Run the Bias-Corrected Simulation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-subsample-the-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Subsample the Output
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-visualize-the-improvement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Visualize the Improvement
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -428,7 +539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/understanding-files/" class="md-nav__link">
+      <a href="../understanding-files/" class="md-nav__link">
         
   
   
@@ -456,7 +567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/migrating-to-rapid2/" class="md-nav__link">
+      <a href="../migrating-to-rapid2/" class="md-nav__link">
         
   
   
@@ -490,10 +601,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -502,7 +616,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
         
           
-          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="">
             
   
   
@@ -538,7 +652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/examples/tutorial-mississippi/" class="md-nav__link">
+      <a href="../examples/tutorial-mississippi/" class="md-nav__link">
         
   
   
@@ -601,91 +715,57 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#citation-information" class="md-nav__link">
+  <a href="#1-calculate-the-scaling-factors" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Citation Information
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Citation Information">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#software-citation-formats" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Software Citation Formats
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Software Citation Formats">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#apa-style" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        APA Style
+        1. Calculate the Scaling Factors
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#mla-style" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#2-apply-bias-correction-to-external-inflow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        MLA Style
+        2. Apply Bias Correction to External Inflow
       
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#software-details" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#3-run-the-bias-corrected-simulation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Software Details
+        3. Run the Bias-Corrected Simulation
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#key-publications" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#4-subsample-the-output" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Key Publications
+        4. Subsample the Output
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#citationcff" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#5-visualize-the-improvement" class="md-nav__link">
     <span class="md-ellipsis">
       
-        CITATION.cff
+        5. Visualize the Improvement
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -706,40 +786,51 @@
 
 
 
-<h1 id="citing-rapid">Citing RAPID<a class="headerlink" href="#citing-rapid" title="Permanent link">&para;</a></h1>
-<h2 id="citation-information">Citation Information<a class="headerlink" href="#citation-information" title="Permanent link">&para;</a></h2>
-<p>If you use RAPID in your research, please cite it using the following information:</p>
-<h3 id="software-citation-formats">Software Citation Formats<a class="headerlink" href="#software-citation-formats" title="Permanent link">&para;</a></h3>
-<h4 id="apa-style">APA Style<a class="headerlink" href="#apa-style" title="Permanent link">&para;</a></h4>
+<h1 id="bias-correction-the-rapid2-sandbox">Bias Correction: The RAPID2 Sandbox<a class="headerlink" href="#bias-correction-the-rapid2-sandbox" title="Permanent link">&para;</a></h1>
+<p>This tutorial demonstrates how to correct biases in external inflows using the Long-Term Inverse Routing (LTIR) methodology in RAPID2. </p>
 <blockquote>
-<p>David, C. H. (2025). <em>Routing Application for Programmed Integration of Discharge (RAPID)</em> [Computer software]. GitHub. https://github.com/c-h-david/rapid2</p>
+<p><strong>Prerequisites:</strong> We assume you have already completed the Quick Start tutorial (<code>quick-start.md</code>). Your Python virtual environment should be activated, and the Sandbox data must already be downloaded into the <code>input/Sandbox/</code> and <code>output/Sandbox/</code> directories.</p>
 </blockquote>
-<h4 id="mla-style">MLA Style<a class="headerlink" href="#mla-style" title="Permanent link">&para;</a></h4>
+<h2 id="1-calculate-the-scaling-factors">1. Calculate the Scaling Factors<a class="headerlink" href="#1-calculate-the-scaling-factors" title="Permanent link">&para;</a></h2>
+<p>First, we need to compute the scaling factors using our "First Guess" (FG) flawed external inflow and our "True" (TR) observations. We'll use the <code>ltir_scl</code> tool to generate a scaling parameter file (<code>scl_Sandbox.parquet</code>):</p>
+<div class="highlight"><pre><span></span><code>ltir_scl<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-con<span class="w"> </span>input/Sandbox/con_Sandbox.parquet<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-bas<span class="w"> </span>input/Sandbox/bas_Sandbox_ascend.parquet<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-Qex<span class="w"> </span>input/Sandbox/Qex_Sandbox_19700101_19700110_FG.nc4<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-Qob<span class="w"> </span>input/Sandbox/Qob_Sandbox_19700101_19700110_TR.nc4<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-scl<span class="w"> </span>input/Sandbox/scl_Sandbox_tst.parquet
+</code></pre></div>
+<h2 id="2-apply-bias-correction-to-external-inflow">2. Apply Bias Correction to External Inflow<a class="headerlink" href="#2-apply-bias-correction-to-external-inflow" title="Permanent link">&para;</a></h2>
+<p>Now, we apply the computed scalars to the flawed First Guess inflow (<code>Qex_..._FG.nc4</code>) to create a new, Bias Corrected external inflow file (<code>Qex_..._BC.nc4</code>) using the <code>ltir_cor</code> tool:</p>
+<div class="highlight"><pre><span></span><code>ltir_cor<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-prv<span class="w"> </span>input/Sandbox/Qex_Sandbox_19700101_19700110_FG.nc4<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-scl<span class="w"> </span>input/Sandbox/scl_Sandbox.parquet<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-now<span class="w"> </span>input/Sandbox/Qex_Sandbox_19700101_19700110_BC_tst.nc4
+</code></pre></div>
+<h2 id="3-run-the-bias-corrected-simulation">3. Run the Bias-Corrected Simulation<a class="headerlink" href="#3-run-the-bias-corrected-simulation" title="Permanent link">&para;</a></h2>
+<p>With our corrected inflow ready, we can run the model using the Bias Correction (BC) namelist:</p>
+<div class="highlight"><pre><span></span><code>rapid2<span class="w"> </span>--namelist<span class="w"> </span>input/Sandbox/nml_Sandbox_BC.yml
+</code></pre></div>
 <blockquote>
-<p>David, Cedric H. <em>Routing Application for Programmed Integration of Discharge (RAPID)</em>. GitHub, 2025, github.com/c-h-david/rapid2.</p>
+<p><strong>Note:</strong> This namelist is pre-configured to use the newly generated <code>Qex_..._BC.nc4</code> inflow file. It will output <code>Qou_Sandbox_19700101_19700110_BC_tst.nc4</code> and <code>Qfi_Sandbox_19700101_19700110_BC_tst.nc4</code> in your <code>output/Sandbox/</code> folder.</p>
 </blockquote>
-<h3 id="software-details">Software Details<a class="headerlink" href="#software-details" title="Permanent link">&para;</a></h3>
-<p><strong>Author:</strong> Cedric H. David<br />
-<strong>Affiliation:</strong> Jet Propulsion Laboratory, California Institute of Technology<br />
-<strong>ORCID:</strong> https://orcid.org/0000-0002-0924-5907<br />
-<strong>Repository:</strong> https://github.com/c-h-david/rapid2<br />
-<strong>Website:</strong> http://rapid-hub.org/<br />
-<strong>License:</strong> BSD-3-Clause</p>
-<h3 id="key-publications">Key Publications<a class="headerlink" href="#key-publications" title="Permanent link">&para;</a></h3>
-<p>Please also cite the following key publications when using RAPID:</p>
-<ol>
-<li>
-<p><strong>River Network Routing on the NHDPlus Dataset</strong><br />
-   DOI: <a href="https://doi.org/10.1175/2011JHM1345.1">10.1175/2011JHM1345.1</a></p>
-</li>
-<li>
-<p><strong>A decade of RAPID - Reflections on the development of an open source geoscience code</strong><br />
-   DOI: <a href="https://doi.org/10.1002/2015EA000142">10.1002/2015EA000142</a></p>
-</li>
-</ol>
-<h3 id="citationcff">CITATION.cff<a class="headerlink" href="#citationcff" title="Permanent link">&para;</a></h3>
-<p>For automated citation tools, RAPID includes a <code>CITATION.cff</code> file in the repository with complete citation metadata.</p>
-<p>For more publications and detailed citation information, see <a href="../publications/">Publications</a>.</p>
+<h2 id="4-subsample-the-output">4. Subsample the Output<a class="headerlink" href="#4-subsample-the-output" title="Permanent link">&para;</a></h2>
+<p>To compare our corrected model output with the true observations, we need to spatially and temporally subsample the high-resolution output (<code>Qou</code>) to match the daily cadence of our gauges, creating our Model Equivalent (<code>Qme</code>):</p>
+<div class="highlight"><pre><span></span><code>subsampleqout<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-Qou<span class="w"> </span>output/Sandbox/Qou_Sandbox_19700101_19700110_BC.nc4<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-obs<span class="w"> </span>input/Sandbox/obs_Sandbox.parquet<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-dtO<span class="w"> </span><span class="m">86400</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-Qme<span class="w"> </span>output/Sandbox/Qme_Sandbox_19700101_19700110_BC_tst.nc4
+</code></pre></div>
+<h2 id="5-visualize-the-improvement">5. Visualize the Improvement<a class="headerlink" href="#5-visualize-the-improvement" title="Permanent link">&para;</a></h2>
+<p>Finally, let's plot the hydrographs to see how well the bias correction worked! We'll compare the new Model Equivalent (<code>Qme</code>) to the True observations (<code>Qob</code>):</p>
+<div class="highlight"><pre><span></span><code>hydrographs<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-Qob<span class="w"> </span>input/Sandbox/Qob_Sandbox_19700101_19700110_TR.nc4<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-Qme<span class="w"> </span>output/Sandbox/Qme_Sandbox_19700101_19700110_BC.nc4<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-max<span class="w"> </span><span class="m">100</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-hyd<span class="w"> </span>output/Sandbox/hyd_Qou_BC.svg
+</code></pre></div>
+<p>Check your <code>output/Sandbox/</code> folder for the newly generated <code>.svg</code> files (e.g., <code>hyd_BC_30.svg</code> and <code>hyd_BC_50.svg</code>). You will see that the red dashed line (model equivalent) now aligns beautifully with the black solid line (observations)!</p>
 
 
 
